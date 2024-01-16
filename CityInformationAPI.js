@@ -2,17 +2,23 @@
 const GEO_API_URL = 'https://wft-geo-db.p.rapidapi.com/v1/geo/cities';
 const WEATHER_API_URL = 'https://weatherbit-v1-mashape.p.rapidapi.com/current';
 
+// Configuration object for API keys
+const API_KEYS = {
+  geo: 'b2e17efe33mshf379dbe2cc12efdp188e83jsna8b5e7c7a5b0',
+  weather: 'b2e17efe33mshf379dbe2cc12efdp188e83jsna8b5e7c7a5b0'
+};
 
-// Separate headers for the two APIs
+// Headers for the two APIs
 const GEO_HEADERS = {
   'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
-  'X-RapidAPI-Key': 'b2e17efe33mshf379dbe2cc12efdp188e83jsna8b5e7c7a5b0'
+  'X-RapidAPI-Key': API_KEYS.geo
 };
 
 const WEATHER_HEADERS = {
   'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com',
-  'X-RapidAPI-Key': 'b2e17efe33mshf379dbe2cc12efdp188e83jsna8b5e7c7a5b0'
+  'X-RapidAPI-Key': API_KEYS.weather
 };
+
 
 // Function to fetch city details using the Teleport API
 const getCityDetails = async (cityName) => {
