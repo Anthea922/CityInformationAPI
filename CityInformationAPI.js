@@ -30,8 +30,8 @@ const getCityDetails = async (cityName) => {
       // Return the first city in the data array
       return data.data[0];
     } else {
-      // Throw an error if the city is not found
-      throw new Error('City not found');
+      // Throw an error with specific details if the city is not found
+      throw new Error(`City not found for query: ${cityName}`);
     }
   } catch (error) {
     // Log and rethrow any errors that occur during the process
